@@ -39,11 +39,11 @@ TDCG_sync({'structure.raw'}, ... % A single RAW file channel input.
 );
 ```
 
-See <alignment_example.m> for a more complex example.
+See [alignment_example.m](alignment_example.m) for a more complex example.
 
 ## License
 
-See the <LICENSE> for more information.
+See the [LICENSE](LICENSE) for more information.
 
 ## Contact
 
