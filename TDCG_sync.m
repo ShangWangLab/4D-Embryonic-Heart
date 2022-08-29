@@ -95,7 +95,7 @@ function TDCG_sync(varargin)
     imarisConvertPath = parser.Results.imarisConvertPath;
     correlationThreshold = parser.Results.correlationThreshold;
     k = parser.Results.k;
-    
+
     % Stack offsets can be listed as a single number for all channels, or
     % as a unique offset for each channel.
     if numel(rawStackOffsets) == 1
@@ -103,9 +103,16 @@ function TDCG_sync(varargin)
     elseif numel(rawStackOffsets) ~= numel(channelPaths)
         error('The number of RAW stack offsets must match the number of channels provided.');
     end
+
+    % Paths are assumed to use forward slashes.
+    channelPaths = cellfun(@(x) strrep(x, '\', '/'), channelPaths, 'UniformOutput', false);
+    outPath = strrep(outPath, '\', '/');
+    if ~isempty(imarisConvertPath)
+        imarisConvertPath = strrep(imarisConvertPath, '\', '/');
+    end
     
     % Ensure no trailing slash on the directory.
-    if outPath(end) == '/' || outPath(end) == '\'
+    while ~isempty(outPath) && outPath(end) == '/'
         outPath = outPath(1:end-1);
     end
     
