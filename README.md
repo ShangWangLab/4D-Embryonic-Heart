@@ -39,7 +39,7 @@ TDCG_sync({'structure.raw'}, ... % A single RAW file channel input.
 );
 ```
 
-See [alignment_example_multi.m](alignment_example_multi.m) for a more complex example, and [alignment_example_with_dataset.m](alignment_example_with_dataset.m) for a plug-and-play example using a downloadable dataset hosted on [https://doi.org/10.6084/m9.figshare.21563472](figshare).
+See [alignment_example_multi.m](alignment_example_multi.m) for a more complex example processing multiple datasets, and [alignment_example_with_dataset.m](alignment_example_with_dataset.m) for a plug-and-play example using a downloadable dataset hosted on [figshare](https://doi.org/10.6084/m9.figshare.21563472).
 
 ## License
 
