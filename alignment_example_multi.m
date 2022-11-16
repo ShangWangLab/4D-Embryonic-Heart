@@ -1,12 +1,8 @@
-% This is some sample code demonstrating a use case to synchronize a set of
+% This sample code demonstrates the use case of synchronizing a set of
 % 24 4D scans programmatically.
 
 % Crops and expected periods are defined individually for each 4D scan,
 % then TDCG_sync is run on each. This example does not use Imaris Convert.
-
-clc;
-close all;
-clear variables;
 
 % These are used as initial guesses for the output period. They are
 % automatically refined by the algorithm, so they can be specified
@@ -88,12 +84,12 @@ for i = 1:24
     umPerPixelY = 1.95;      % The Y-axis scale for Imaris (microns/px).
     umPerBScan = 1125/20000; % The frame step size in microns/Bscan.
 
-    TDCG_sync_12(channelPaths, ...
+    TDCG_sync(channelPaths, ...
         outPath, ...
         expectedPeriods(i), ...
         [umPerPixelX umPerPixelY umPerBScan], ... % [X Y Z] scale.
         [600 600], ... % [height width] B-scan dimensions in the RAW file.
-        1:20000, ... % There are 20000 B-scans in the RAW file. Use all.
+        1:20000, ... % Use all 20000 B-scans in the RAW file.
         'rawStackOffsets', 0, ... % The input RAW files have no headers.
         'verbosity', 2, ... % Show and save diagnostic charts.
         'correlationThreshold', 0.5, ... % 0.4-0.6 is typically good.
