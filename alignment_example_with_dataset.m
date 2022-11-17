@@ -5,10 +5,10 @@
 
 % Only one channel is specified.
 channelPaths = {
-    './E8p5_072416_5D_600X30000_0.8VX0.7V_12ms_SP_T20_20-120_600_DCrem.raw'
+    'E8p5_072416_5D_600X30000_0.8VX0.7V_12ms_SP_T20_20-120_600_DCrem.raw'
 };
 
-outPath = './aligned_TDCG';
+outPath = 'aligned_TDCG';
 
 TDCG_sync(channelPaths, ...
     outPath, ...

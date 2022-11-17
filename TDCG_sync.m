@@ -68,7 +68,7 @@ function TDCG_sync(varargin)
     %% Parse inputs
     parser = inputParser();
     addRequired(parser, 'channelPaths', @(x) all(cellfun(@ischar, x)));
-    addRequired(parser, 'outPath', @(x) exist(fileparts(x), 'dir'));
+    addRequired(parser, 'outPath', @(x) exist(fileparts(x), 'dir') || isempty(fileparts(x)));
     addRequired(parser, 'expectedHeartPeriod', @(x) mod(x, 1) == 0);
     addRequired(parser, 'inputResolution', @isnumeric);
     addRequired(parser, 'imageShape', @(x) all(mod(x, 1) == 0));
