@@ -1,6 +1,6 @@
 # 4D Embryonic Heart
 
-This MATLAB script is designed to synchronize 4D OCT scans of the beating heart using the TDCG method. (A citation will be provided when the associated paper has been published).
+This MATLAB script is designed to synchronize 4D OCT scans of the beating heart using the TDCG method in the paper, [Open-source, highly efficient, post-acquisition synchronization for 4D dual-contrast imaging of mouse embryonic heart over development with optical coherence tomography](https://doi.org/10.1364/BOE.475027).
 
 ## Dependencies
 
