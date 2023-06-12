@@ -48,3 +48,9 @@ See the [LICENSE](LICENSE) for more information.
 ## Contact
 
 Please reach out to Andre Faubert (<afaubert@stevens.edu>) with any questions or comments.
+
+## Acknowledgements
+
+Funded by the National Institutes of Health (R01HD096335, R35GM142953).
+
+A special thanks to our colleages at [Dr. Shang Wang's Biophotonic's Lab](https://www.shangwanglab.org/team)!
